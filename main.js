@@ -46,8 +46,4 @@ contact.addEventListener("click", () => {
     },
   });
 });
-function codeforces() {
-  new WinBox("My CF Profile", {
-    url: "https://youtube.com",
-  });
-}
+function codeforces() {}
