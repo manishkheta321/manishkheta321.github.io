@@ -46,4 +46,6 @@ contact.addEventListener("click", () => {
     },
   });
 });
-function codeforces() {}
+function codeforces() {
+  new WinBox();
+}
