@@ -640,6 +640,24 @@
                 gap: 15px;
             }
         }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: none;
+        }
+        .reveal-fade {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.4,0,0.2,1);
+        }
+        .reveal-fade.active {
+            opacity: 1;
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -661,12 +679,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home">
+    <section id="home" class="reveal">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Manish Kumar Khetan</h1>
                 <p class="hero-subtitle">Software Developer</p>
-                <div class="social-links">
+                <div class="social-links reveal-fade">
                     <a href="https://www.linkedin.com/in/manish-khetan-99a137176" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/manishkheta321" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://codeforces.com/profile/manishkheta321" target="_blank"><i class="fas fa-code"></i></a>
@@ -677,18 +695,18 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="reveal">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-grid">
-                <div class="glass-card">
+                <div class="glass-card reveal">
                     <div class="about-text">
                         <p>I'm a passionate Software Developer with 2 years of experience in building scalable systems, optimizing APIs, and automating workflows. I excel at problem-solving and thrive in collaborative, fast-paced environments.</p>
                         <p>My journey in technology started at the Institute Of Engineering & Management, Kolkata, where I graduated with a B.Tech in Computer Science Engineering with a CGPA of 9.07.</p>
                         <p>Throughout my career, I've worked across diverse domains including EdTech, Gaming, and Technology services, developing a versatile skill set and adaptability to different business requirements.</p>
                     </div>
                 </div>
-                <div class="glass-card">
+                <div class="glass-card reveal">
                     <h3>Technical Skills</h3>
                     <div class="skills-list">
                         <span class="skill-pill">Python</span>
@@ -714,11 +732,11 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="reveal">
         <div class="container">
             <h2>Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="glass-card">
                         <div class="timeline-date">Jan 2024 - Nov 2024</div>
                         <h3 class="timeline-title">Software Developer</h3>
@@ -736,7 +754,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="glass-card">
                         <div class="timeline-date">Jan 2023 - Oct 2023</div>
                         <h3 class="timeline-title">Backend Developer</h3>
@@ -752,7 +770,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="glass-card">
                         <div class="timeline-date">Jan 2022 - Nov 2022</div>
                         <h3 class="timeline-title">Software Developer</h3>
@@ -774,11 +792,11 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="reveal">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-content">
                         <h3 class="project-title">Codeforces Chrome Extension</h3>
                         <p>Developed a Chrome extension that integrates with Codeforces profiles to enhance user insights by displaying a graph of submissions by problem tags.</p>
@@ -790,7 +808,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
                     <div class="project-content">
                         <h3 class="project-title">Codeforces Bot</h3>
                         <p>Built and deployed a Discord Bot that notifies users of upcoming coding contests and plots any user's rating graph.</p>
@@ -806,25 +824,25 @@
         </div>
     </section>
     <!-- Interests Section -->
-    <section id="interests">
+    <section id="interests" class="reveal">
         <div class="container">
             <h2>Interests</h2>
             <div class="interests-grid">
-                <div class="glass-card interest-card">
+                <div class="glass-card interest-card reveal">
                     <div class="interest-icon">
                         <i class="fas fa-cards"></i>🃏
                     </div>
                     <h3>Cardistry</h3>
                     <p>I'm passionate about the art of card manipulation, creating visual displays and flourishes with playing cards as a creative outlet.</p>
                 </div>
-                <div class="glass-card interest-card">
+                <div class="glass-card interest-card reveal">
                     <div class="interest-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>Gaming</h3>
                     <p>I enjoy both competitive and casual gaming, appreciating the strategic thinking, problem-solving, and immersive storytelling that games offer.</p>
                 </div>
-                <div class="glass-card interest-card">
+                <div class="glass-card interest-card reveal">
                     <div class="interest-icon">
                         <i class="fas fa-puzzle-piece"></i>
                     </div>
@@ -835,11 +853,11 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-container">
-                <a href="mailto:manish.khetan123456789@gmail.com" class="contact-card-wrapper">
+                <a href="mailto:manish.khetan123456789@gmail.com" class="contact-card-wrapper reveal">
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -851,7 +869,7 @@
                     </div>
                 </a>
                 
-                <a href="tel:8016613282" class="contact-card-wrapper">
+                <a href="tel:8016613282" class="contact-card-wrapper reveal">
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
@@ -863,7 +881,7 @@
                     </div>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/manish-khetan-99a137176" target="_blank" class="contact-card-wrapper">
+                <a href="https://www.linkedin.com/in/manish-khetan-99a137176" target="_blank" class="contact-card-wrapper reveal">
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin-in"></i>
@@ -891,7 +909,6 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -906,6 +923,20 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Scroll Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal, .reveal-fade');
+        const revealObserver = new window.IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
         });
     </script>
 </body>
